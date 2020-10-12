@@ -14,7 +14,7 @@ Class-based views
 app_name = "post"
 urlpatterns = [
 
-path('', views.post_list, name='home'),
-path('<int:id>', views.post_detail, name='home')
+path('', views.PostList.as_view(), name='post_list'),
+path('<int:pk>', views.PostDetail.as_view(), name='detail')
 
 ]
